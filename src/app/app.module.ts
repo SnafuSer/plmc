@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { MnFullpageModule } from 'ngx-fullpage';
+import { NavComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, NavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MnFullpageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,176 @@
+@import "~fullpage.js/dist/jquery.fullpage.css";
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+#fp-nav {
+  top: 50% !important;
+}
+
+.menu-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 70;
+  text-align: center;
+  height: 40px;
+  margin: auto;
+}
+
+
+.menu {
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+.container {
+  width: 480px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+li {
+  transform: rotate(-90deg);
+  width: 100px;
+  height: 25px;
+  list-style-type: none;
+  margin: 120px 10px;
+  text-decoration: none;
+  color: #606060;
+  padding: 0 5px;
+  line-height: 25px;
+  font-size: 10px;
+  font-family: arial;
+}
+li a {
+  text-decoration: none;
+  color: #606060;
+  transition:.2s;
+  text-transform: uppercase;
+}
+li.active a {
+  text-decoration: none;
+  color: white;
+}
+li.active  {
+  background-color: #606060;
+}
+.square-title {
+  height: 350px;
+  width: 0px;
+  background-color: #EFEFEF;
+  position: absolute;
+  transition: 500ms;
+  transition-delay: 0.1s;
+  overflow: hidden;
+}
+.square-title.right {
+  width: 350px;
+}
+.square {
+    transition: 500ms;
+    transition-delay: 0.1s;
+    z-index: 2;
+    width: 0px;
+    height: 250px;
+    background-color: blue;
+    position: relative;
+    left: 220px;
+    top: 10px;
+}
+.name {
+  font-family: Arial;
+  color: #606060;
+  top: 20px;
+  left:20px;
+  position: relative;
+}
+.play {
+  height: 40px;
+  width: 0px;
+  overflow: hidden;
+  background-color: #606060;
+  line-height: 40px;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  color: white;
+  top: 280px;
+  left: -50px;
+  transition: 500ms;
+    transition-delay: 0.1s;
+}
+.play p{
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+.play.right {
+  width: 150px;
+}
+.bg {
+  height: 100%;
+  widows: 100%;
+  background-color: #000;
+}
+.square.right {
+    width: 250px;
+}
+.container.none {
+  z-index: 0;
+    transition: 0.01s;
+}
+.bg-test {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC);
+  position: absolute;
+  transform: scale(1);
+  transition: .5s;    
+  -webkit-animation: bg-scrolling-reverse 3.92s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 3.92s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 3.92s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 3.92s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+}
+.bg-test.none {
+  transform: scale(1.6)
+}
+
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
