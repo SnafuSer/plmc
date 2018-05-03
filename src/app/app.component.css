@@ -66,15 +66,15 @@ li a {
 }
 li.active a {
   text-decoration: none;
-  color: white;
+  color: #222;
 }
 li.active  {
-  background-color: #606060;
+  background-color: #FFF;
 }
 .square-title {
   height: 350px;
   width: 0px;
-  background-color: #EFEFEF;
+  background-color: #2F2F2F;
   position: absolute;
   transition: 500ms;
   transition-delay: 0.1s;
@@ -96,7 +96,7 @@ li.active  {
 }
 .name {
   font-family: Arial;
-  color: #606060;
+  color: #FFF;
   top: 20px;
   left:20px;
   position: relative;
@@ -105,12 +105,12 @@ li.active  {
   height: 40px;
   width: 0px;
   overflow: hidden;
-  background-color: #606060;
+  background-color: #FFF;
   line-height: 40px;
   text-align: center;
   font-family: arial;
   position: relative;
-  color: white;
+  color: #222;
   top: 280px;
   left: -50px;
   transition: 500ms;
@@ -137,26 +137,62 @@ li.active  {
   z-index: 0;
     transition: 0.01s;
 }
-.bg-test {
+h1 {
+  font-family: arial;
+  font-size: 75px;
+  width: 540px;
+  color: white;
+  line-height: 111px;
+  margin: auto;
+  letter-spacing: 20px;
+}
+.bg-back {
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 1;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC);
+  z-index: -1;
+  
+  background-image:url('../assets/bgFar.png');
+  background-size: 70%;
+  /* background-image: url(../assets/test.png); */
   position: absolute;
   transform: scale(1);
   transition: .5s;    
-  -webkit-animation: bg-scrolling-reverse 3.92s infinite; /* Safari 4+ */
-  -moz-animation:    bg-scrolling-reverse 3.92s infinite; /* Fx 5+ */
-  -o-animation:      bg-scrolling-reverse 3.92s infinite; /* Opera 12+ */
-  animation:         bg-scrolling-reverse 3.92s infinite; /* IE 10+ */
+  /* -webkit-animation: bg-scrolling-reverse 3.92s infinite; 
+  -moz-animation:    bg-scrolling-reverse 3.92s infinite; 
+  -o-animation:      bg-scrolling-reverse 3.92s infinite; 
+  animation:         bg-scrolling-reverse 3.92s infinite; 
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function:    linear;
   -o-animation-timing-function:      linear;
-  animation-timing-function:         linear;
+  animation-timing-function:         linear; */
 }
-.bg-test.none {
+.bg-back.none {
+  transform: scale(1.6)
+}
+.bg-front {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  
+  background-image:url('../assets/bgFront.png');
+  /* background-image: url(../assets/test.png); */
+  position: absolute;
+  transform: scale(1);
+  transition: .5s;    
+  /* -webkit-animation: bg-scrolling-reverse 3.92s infinite; 
+  -moz-animation:    bg-scrolling-reverse 3.92s infinite; 
+  -o-animation:      bg-scrolling-reverse 3.92s infinite; 
+  animation:         bg-scrolling-reverse 3.92s infinite; 
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear; */
+}
+.bg-front.none {
   transform: scale(1.6)
 }
 

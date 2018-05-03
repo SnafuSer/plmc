@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'app';
     @Input() public options: MnFullpageOptions = new MnFullpageOptions({
       controlArrows: true,
-      sectionsColor : ['#222222'],
+      sectionsColor : [''],
       scrollingSpeed: 750,
       afterLoad: function(anchorLink, index){
         $(".square").addClass("right");
@@ -38,13 +38,13 @@ export class AppComponent {
       onLeave: function(index, nextIndex, direction){
         //after leaving section 2
         if(index == 2 && direction =='up'){
-          $(".bg-test").removeClass("none");
+          $(".bg-back").removeClass("none");
           $(".square").removeClass("right");
           $(".square-title").removeClass("right");
           $(".play").removeClass("right");
         }
         if(index == 1 && direction =='down'){
-          $(".bg-test").addClass("none");
+          $(".bg-back").addClass("none");
           
         }
   
